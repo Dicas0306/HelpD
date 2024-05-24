@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/menu.css">
+
+  <style>
+    body {
+      background-image: url('public/img/fondopantalla_2.png'); /* Ruta relativa a tu imagen */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh; /* Establece la altura del cuerpo al 100% de la altura de la ventana */
+      margin: 0; /* Elimina el margen por defecto del cuerpo */
+      display: flex; /* Usa flexbox para centrar el contenido verticalmente */
+      justify-content: center; /* Centra horizontalmente el contenido */
+      align-items: center; /* Centra verticalmente el contenido */
+    }
+  </style>
+
+
+  
+  <title>Login de Usuario</title>
+</head>
+<body>
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="public/img/hdlogo.png" id="icon" alt="User Icon" />
+      <h1>Help-Desk</h1>
+    </div>
+
+    <!-- Login Form -->
+    <form id="frmLogin" method="POST" onsubmit="return loginUsuario()">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario" required>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña" required>
+      <input type="submit" class="fadeIn fourth" value="Iniciar sesión">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#" data-toggle="modal" data-target="#modalContacto">Contactar con el Administrador</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Si no tienes una credencial llama a la Extensión 31200
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="public/jquery/jquery-3.6.0.min.js"></script>
+<script src="public/bootstrap/popper.min.js"></script>
+<script src="public/bootstrap/bootstrap.min.js"></script>
+<script src="public/sweetalert2/sweetalert2@11.js"></script>
+<script src="public/js/usuarios/login.js"></script>
+
+
+</body>
+</html>
